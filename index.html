@@ -2,131 +2,116 @@
 <html lang="mn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Төрсөн өдрийн гэнэтийн бэлэг</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Nanu 💖</title>
 
-  <!-- Handwritten style font -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Handlee&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      height: 100vh;
-      font-family: 'Handlee', cursive;
-      background: linear-gradient(135deg,
-        #ffb6c1,
-        #ffffff,
-        #ff4d6d,
-        #ffd93d,
-        #6ee7b7,
-        #60a5fa);
-      background-size: 400% 400%;
-      animation: gradientMove 12s ease infinite;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffd6e8, #fff0f6);
       display: flex;
-      align-items: center;
       justify-content: center;
-      overflow: hidden;
+      align-items: center;
+      font-family: 'Pacifico', cursive;
     }
 
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .slide {
-      display: none;
-      text-align: center;
-      padding: 35px;
-      max-width: 650px;
-      animation: fadeIn 1.2s ease;
-    }
-
-    .active {
-      display: block;
+    .card {
+      width: 90%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      padding: 20px;
     }
 
     h1 {
-      font-family: 'Pacifico', cursive;
-      color: #b3003b;
-      font-size: 2.4rem;
-      line-height: 1.4;
-    }
-
-    .heart {
-      font-size: 3.5rem;
-      cursor: pointer;
-      margin-top: 35px;
-      animation: pulse 1.2s infinite;
-      filter: drop-shadow(0 0 10px rgba(255,0,80,0.6));
+      text-align: center;
+      color: #ff4d88;
+      margin-bottom: 15px;
     }
 
     .letter {
-      background: rgba(255,255,255,0.88);
-      border-radius: 25px;
-      padding: 30px;
-      color: #333;
-      line-height: 1.9;
-      font-size: 1.15rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      max-height: 60vh;          /* 🔥 ЭНД ГҮЙЛГЭНЭ */
+      overflow-y: auto;
+      padding-right: 10px;
+      color: #444;
+      line-height: 1.8;
+      font-size: 18px;
     }
 
-    .letter p {
-      margin: 0;
+    /* Scrollbar гоё болгох */
+    .letter::-webkit-scrollbar {
+      width: 6px;
+    }
+    .letter::-webkit-scrollbar-thumb {
+      background: #ff9acb;
+      border-radius: 10px;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.25); }
-      100% { transform: scale(1); }
+    .music {
+      margin-top: 15px;
+      text-align: center;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(25px); }
-      to { opacity: 1; transform: translateY(0); }
+    audio {
+      width: 100%;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
-  <!-- Slide 1 -->
-  <div class="slide active" id="slide1">
-    <h1>Төрсөн өдрийн ертөнцийн хамгийн хөөрхөн гүнж ээ 💖</h1>
-    <div class="heart" onclick="goNext()">❤️</div>
-    <p>(Зүрхэн дээр дараарай)</p>
-  </div>
-
-  <!-- Slide 2 -->
-  <div class="slide" id="slide2">
-    <audio id="bgm" loop>
-      <source src="Nanuhbd.mp3" type="audio/mpeg">
-      Таны хөтөч аудио тоглуулах боломжгүй байна.
-    </audio>
+  <div class="card">
+    <h1>Төрсөн өдрийн мэнд 💖</h1>
 
     <div class="letter">
       <p>
-        Хорвоогийн хамгийн хөөрхөн гүнж танд төрсөн өдрийн мэнд хүргэе!!!<br><br>
-        Сайн уу хайраа гээд энэхүү захиаг эхлүүлэхийг хэдэн мянган удаа хүссэн ч надад ингэх эрх байгаа үгүйг мэдэхгүй байна. Өнөөдөр чиний хувьд хамгийн онцгой өдрүүдийн нэг, миний ч гэсэн. Яагаад гэж үү. Чи мэдэхгүй байж магадгүй ч миний амьдралд өнгө нэмсэн, урагшлах урам зориг, утга учир, хүсэл болсон хүний хорвоод мэндэлсэн өдөр тохиож байхад онцгой байхын аргагүй.<br><br>
-        Юу юунаас илүүтэй хамгийн эхэнд ертөнц дээрх байж болох бүх сайхан зүйлсийг хүсье. Энэ захиаг ингээд өөрийн гараар бичиж өгөөд сэтгэлээ илчлээд зогсохыг маш их хүсэж байгаа ч чадахгүй байгааг минь уучлаарай.<br><br>
-        Наран зүгийн салхи зөөлөн сэвэлзсээр гуниг хурсан миний ертөнцийг гийгүүлнэ, надад ирсэн чимээгүй дурлалын мөнхийн салхи нь чи байлаа Намуунаа. Цаг хугацаа өнгөрөхийн хэрээр сэтгэл минь өөр нэгэнд бус зөвхөн чам руу тэмүүлээд байх шиг, өдөр солигдох шөнө болгон сарыг харах шалтгаан минь чи болоод байх шиг.<br><br>
-        Чи надад итгэхгүй байх л даа, гэхдээ өдөртөө уулзаж чадаагүй гуниг, хамт байхыг мөрөөдсөн нууцхан хүслээ шөнө бүр зүүдэндээ биелүүлэх юм. Чиний нүд яг л далай шиг, хэрвээ би сэлэх юм бол дахин агаар амьсгалхаар гарч ирж чадахгүй байх. Аадар бороо элсэн цөлд асгардаггүй шиг өөр нэгэнд дусаж үзээгүй миний сэтгэл чи гэх цорын ганц цэцгэн дээр өөрийн эрхгүй шиврэн орно.<br><br>
-        Мэдээж олон саад бэрхшээл тулгарсан ч, олон олон өвдөлтийг авсан ч ганц л удаа намайг гэхийг чинь хүлээсээр гурван жилийг үдэж өнөөдрийн би энд иржээ.<br><br>
-        Ганцхан чи л инээж байвал, харцанд чинь гуниг биш гэрэл цацарч байвал хүсэл минь биелэнэ. Чамд гэж анхны бүхнийг хийж сурна. Амсуулж чадаагүй анх удаа хийсэн бялуунаас эхлээд…<br><br>
-        Манай найзууд надаас асуудаг байсан л даа. Намайг чамд сайн юм уу гээд. Тэр болгонд нь ганц л хэлдэг байсан зүйл минь “сайн бишээ, бүр хайртай” гэдэг байлаа.<br><br>
-        Хэдэн мянга, хэдэн сая удаа хэлэх гээд хэлж чадаагүй миний сүүлийн үг: Би чамд хайртай Намуунаа. Гол нь гол нь жаргалтай байгаарай. Юу ч болсон өөрийнхөө хүслээр шийдээрэй. Ямар ч зүйл байсан би зүгээрээ. Тийм ээ, зүгээр. Шалтгаан нь чи л учраас.<br><br>
-        Төрсөн өдрийн мэнд хүргэе, хайртай шүү.<br><br>
+        Хорвоогийн хамгийн хөөрхөн гүнж танд төрсөн өдрийн мэнд хүргэе!!!
+        Сайн уу хайраа гээд энэхүү захиаг эхлүүлэхийг хэдэн мянган удаа хүссэн ч
+        надад ингэх эрх байгаа үгүйг мэдэхгүй байна...
+      </p>
+
+      <p>
+        Өнөөдөр чиний хувьд хамгийн онцгой өдрүүдийн нэг, миний ч гэсэн.
+        Чи миний амьдралд өнгө нэмсэн, урагшлах урам зориг болсон хүн...
+      </p>
+
+      <p>
+        Чиний нүд яг л далай шиг,
+        хэрвээ би сэлэх юм бол дахин агаар амьсгалхаар гарч ирж чадахгүй байх.
+      </p>
+
+      <p>
+        Би чамд хайртай Намуунаа.
+        Хамгийн гол нь жаргалтай байгаарай 🤍
+      </p>
+
+      <p style="text-align:right;">
         — Энхмэнд
       </p>
     </div>
-  </div>
 
-  <script>
-    function goNext() {
-      document.getElementById('slide1').classList.remove('active');
-      document.getElementById('slide2').classList.add('active');
-      document.getElementById('bgm').play();
-    }
-  </script>
+    <div class="music">
+      <audio controls autoplay loop>
+        <source src="Nanuhbd.mp3" type="audio/mpeg">
+        Таны браузер дуу тоглуулахыг дэмжихгүй байна.
+      </audio>
+    </div>
+
+    <div class="footer">
+      A small birthday surprise 💝
+    </div>
+  </div>
 
 </body>
 </html>
