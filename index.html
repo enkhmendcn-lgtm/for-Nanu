@@ -8,118 +8,85 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  height: 100vh;
-  font-family: 'Pacifico', cursive;
-  background: linear-gradient(120deg,#ffd6e8,#fff0f6,#ffe066,#d3f9d8,#d0ebff);
-  background-size: 400% 400%;
-  animation: bg 15s ease infinite;
-  overflow: hidden;
+body{
+  margin:0;
+  height:100vh;
+  font-family:'Pacifico',cursive;
+  background:linear-gradient(120deg,#ffd6e8,#fff0f6,#ffe066,#d3f9d8,#d0ebff);
+  background-size:400% 400%;
+  animation:bg 15s ease infinite;
+  overflow:hidden;
 }
-
-@keyframes bg {
-  0% {background-position:0% 50%}
-  50% {background-position:100% 50%}
-  100% {background-position:0% 50%}
+@keyframes bg{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
-
-.slide {
-  display: none;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+.slide{
+  display:none;
+  height:100vh;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
 }
-
-.slide.active {
-  display: flex;
+.slide.active{display:flex;}
+.card{
+  background:rgba(255,255,255,.92);
+  border-radius:20px;
+  max-width:650px;
+  width:95%;
+  padding:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,.2);
 }
-
-.card {
-  background: rgba(255,255,255,0.9);
-  border-radius: 20px;
-  padding: 25px;
-  max-width: 600px;
-  width: 90%;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+h1{text-align:center;color:#ff4d88;}
+.heart{
+  font-size:40px;
+  text-align:center;
+  cursor:pointer;
+  animation:pulse 1.5s infinite;
 }
-
-h1 {
-  color: #ff4d88;
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.3)}
+  100%{transform:scale(1)}
 }
-
-.heart-btn {
-  margin-top: 25px;
-  font-size: 40px;
-  cursor: pointer;
-  animation: pulse 1.5s infinite;
+.letter{
+  max-height:55vh;
+  overflow-y:auto;
+  white-space:pre-wrap;
+  line-height:1.9;
+  font-size:17px;
+  color:#444;
 }
-
-@keyframes pulse {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.3);}
-  100% {transform: scale(1);}
-}
-
-.letter {
-  max-height: 50vh;
-  overflow-y: auto;
-  text-align: left;
-  font-size: 17px;
-  line-height: 1.8;
-  color: #444;
-  padding-right: 10px;
-}
-
-.letter::-webkit-scrollbar {
-  width: 6px;
-}
-.letter::-webkit-scrollbar-thumb {
-  background: #ff9acb;
-  border-radius: 10px;
-}
-
-audio {
-  width: 100%;
-  margin-top: 15px;
-}
+.letter::-webkit-scrollbar{width:6px;}
+.letter::-webkit-scrollbar-thumb{background:#ff9acb;border-radius:10px;}
+audio{width:100%;margin-top:15px;}
 </style>
 </head>
 
 <body>
 
 <!-- SLIDE 1 -->
-<div class="slide active" id="slide1">
+<div class="slide active" id="s1">
   <div class="card">
     <h1>Төрсөн өдрийн ертөнцийн<br>хамгийн хөөрхөн гүнж ээ 💖</h1>
-    <div class="heart-btn" onclick="goNext()">❤️<br><span style="font-size:14px;">дарна уу</span></div>
+    <div class="heart" onclick="next()">❤️<br><small>дарна уу</small></div>
   </div>
 </div>
 
 <!-- SLIDE 2 -->
-<div class="slide" id="slide2">
+<div class="slide" id="s2">
   <div class="card">
     <h1>Чамд зориулсан захиа 💌</h1>
 
     <div class="letter">
-Хорвоогийн хамгийн хөөрхөн гүнж танд төрсөн өдрийн мэнд хүргэе!!!
+Сайн уу хайраа гээд энэхүү захиаг эхлүүлэхийг хэдэн мянган удаа хүссэн ч надад ингэх эрх байгаа үгүйг мэдэхгүй байна.  Өнөөдөр чиний хувьд хамгийн онцгой өдрүүдийн нэг, миний ч гэсэн. Яагаад гэж үү. Чи мэдэхгүй байж магадгүй ч миний амьдралд өнгө нэмсэн, урагшлах урам зориг утга учир  хүсэл болсон хүний хорвоод мэндэлсэн өдөр тохиож байхад онцгой байхын аргагүй. Юу юунаас илүүтэй хамгийн эхэнд ертөнц дээрх байж болох бүх сайхан зүйлсийг хүсье.  Энэ захиаг ингээд өөрийн гараар бичээд сэтгэлээ илчлээд зогсохыг маш их хүсэж байгаа ч чадахгүй байгааг минь уучлаарай.Наран зүгийн салхи зөөлөн сэвэлзсээр гуниг хурсан миний ертөнцийг гийгүүлнэ, надад ирсэн чимээгүй дурлалын мөнхийн салхи нь чи байлаа Намуунаа.Цаг хугацаа өнгөрөхийн хэрээр сэтгэл минь өөр нэгэнд бус зөвхөн чам руу тэмүүлээд байх шиг, өдөр солигдох шөнө болгон сарыг харах шалтгаан минь чи болоод байх шиг. Чи надад итгэхгүй байх л даа гэхдээ өдөртөө уулзаж чадаагүй гуниг, хамт байхыг мөрөөдсөн нууцхан хүслээ шөнө бүр зүүдэндээ биелүүлэх юм. Чиний нүд яг л далай шиг хэрвээ би сэлэх юм бол дахин агаар амьсгалхаар гарч ирж чадахгүй байх.Аадар бороо элсэн цөлд асгардаггүй шиг өөр нэгэнд дусаж үзээгүй миний сэтгэл чи гэх цорын ганц цэцгэн дээр өөрийн эрхгүй шиврэн орно.
+Мэдээж олон саад бэрхшээл тулгарсан ч, олон олон өвдөлтийг авсан ч ганц л удаа намайг гэхийг чинь хүлээсээр гурван жилийг үдэж өнөөдрийн би энд иржээ.
+Ганцхан чи л инээж байвал, харцанд чинь гуниг биш гэрэл цацарч байвал хүсэл минь биелэнэ.Чамд гэж анхны бүхнийг хийж сурна. Амсуулж чадаагүй анх удаа хийсэн бялуунаас эхлээд.  Чамайг зөвхөн чамайг л гэх нандин хүслээр нар сарны солигдохыг ч умартан  сэтгэлийн диваажин тэнгэрийн мөрөөдөлд умбана. Мөрөөдөлтэй байх сайхан ч хүрч чадахгүй байх хамгийн хэцүү.Манай найзууд надаас асуудаг байсан л даа. Намайг чамд сайн юм уу гээд. Тэр болгонд нь ганц хэлдэг байсан зүйл минь “сайн бишээ, бүр хайртай” гэдэг байлаа.Зөрөөд өнгөрөх энэ орчлонд зөвхөн чам руу гэж дөрвөн өвөл гурван зуныг өнгөрүүлсэн ч дөрөв дэх зун байгаа эсэхийг энэ захиа шийдэх байх.Амьдралын далайг туулах хөлөг онгоцоо чам руу чиглүүлэвч намайг багтаах зогсоол чамд байгаа үгүйг бас л мэдэхгүй юм. Би л биш юм байна, яагаад ингэж байгаа юм бол, миний юу болохгүй байгаа юм бол гээд олон асуултад тархи зүрх хоёр хариулж чадахгүй үргэлж үлдэнэ. Буруу цагтаа учирсан зөв хүн, зөв цагтаа учирсан буруу хүн гээд би аль нь ч байсан чиний төлөө өөрийн чадах бүхнээ хийсэн болохоор харамсахгүй ээ. 
+Хоёулаад нэг нэгэндээ биелүүлж өгөх нэг нэг хүсэл байгааг санаж байна уу. Хоолоо сайн идээд, дулаан хувцсаа өмсөөд, юу ч болж байсан бууж өгөлгүй, уйлах биш инээж, хамгийн гол нь жаргалтай байгаарай энэ миний хүсэл. 
+Хэдэн мянга, хэдэн сая удаа хэлэх гээд хэлж чадаагүй миний сүүлийн үг Би чамд хайртай Намуунаа. Гол нь гол нь жаргалтай байгаарай, юу ч болсон өөрийнхөө хүслээр шийдээрэй, ямар ч зүйл байсан би зүгээрээ. Тийм ээ зүгээр. Шалтгаан нь чи л учраас. Чамтай үүрд хамт баймаар ч хэрвээ чи хүсэхгүй бол хүчлэхийг бүр хүсэхгүй ээ.  Миний амьдрах шалтгаан минь байсанд баярлалаа. Энэ өдөр дэргэд чинь байж чадахгүй байгаад уучлаарай. Харин зун очихдоо заавал амалсан бүх амлалтаа биелүүлээд, бэлэг дүүрэн очно гэдгийг амлаж байна. Төрсөн өдрийн мэнд хүргэе хайртай шүү. 
 
-Сайн уу хайраа гээд энэхүү захиаг эхлүүлэхийг хэдэн мянган удаа хүссэн ч надад ингэх эрх байгаа үгүйг мэдэхгүй байна. Өнөөдөр чиний хувьд хамгийн онцгой өдрүүдийн нэг, миний ч гэсэн.
-
-Чи миний амьдралд өнгө нэмсэн, урагшлах урам зориг, утга учир болсон хүн. Чиний төрсөн өдөр тохиож байхад онцгой байхын аргагүй.
-
-Наран зүгийн салхи зөөлөн сэвэлзсээр гуниг хурсан миний ертөнцийг гийгүүлнэ. Чимээгүй дурлалын салхи нь чи байлаа Намуунаа.
-
-Чиний нүд яг л далай шиг, хэрвээ би сэлэх юм бол дахин агаар амьсгалхаар гарч ирж чадахгүй байх.
-
-Ганцхан чи л инээж байвал, харцанд чинь гуниг биш гэрэл цацарч байвал миний хүсэл биелнэ.
-
-Би чамд хайртай Намуунаа.
-Гол нь гол нь жаргалтай байгаарай.
-
-— Энхмэнд
+                                                       Энхмэндээс
     </div>
 
     <audio controls autoplay loop>
@@ -129,9 +96,9 @@ audio {
 </div>
 
 <script>
-function goNext() {
-  document.getElementById("slide1").classList.remove("active");
-  document.getElementById("slide2").classList.add("active");
+function next(){
+  document.getElementById("s1").classList.remove("active");
+  document.getElementById("s2").classList.add("active");
 }
 </script>
 
