@@ -1,117 +1,141 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For Nanu 💖</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nanu 💖</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #ffd6e8, #fff0f6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Pacifico', cursive;
-    }
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(120deg,
+    #ffd6e8, #fff0f6, #ffe066, #d3f9d8, #d0ebff);
+  background-size: 400% 400%;
+  animation: bgMove 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .card {
-      width: 90%;
-      max-width: 600px;
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      padding: 20px;
-    }
+/* Background animation */
+@keyframes bgMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
 
-    h1 {
-      text-align: center;
-      color: #ff4d88;
-      margin-bottom: 15px;
-    }
+/* Card */
+.card {
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  padding: 20px;
+  z-index: 10;
+}
 
-    .letter {
-      max-height: 60vh;          /* 🔥 ЭНД ГҮЙЛГЭНЭ */
-      overflow-y: auto;
-      padding-right: 10px;
-      color: #444;
-      line-height: 1.8;
-      font-size: 18px;
-    }
+h1 {
+  text-align: center;
+  color: #ff4d88;
+}
 
-    /* Scrollbar гоё болгох */
-    .letter::-webkit-scrollbar {
-      width: 6px;
-    }
-    .letter::-webkit-scrollbar-thumb {
-      background: #ff9acb;
-      border-radius: 10px;
-    }
+.letter {
+  max-height: 55vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #444;
+}
 
-    .music {
-      margin-top: 15px;
-      text-align: center;
-    }
+/* Scrollbar */
+.letter::-webkit-scrollbar {
+  width: 6px;
+}
+.letter::-webkit-scrollbar-thumb {
+  background: #ff9acb;
+  border-radius: 10px;
+}
 
-    audio {
-      width: 100%;
-    }
+.music {
+  margin-top: 15px;
+}
 
-    .footer {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 14px;
-      color: #888;
-    }
-  </style>
+/* Falling hearts */
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 20px;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h1>Төрсөн өдрийн мэнд 💖</h1>
+<div class="card">
+  <h1>Төрсөн өдрийн мэнд 💖</h1>
 
-    <div class="letter">
-      <p>
-        Хорвоогийн хамгийн хөөрхөн гүнж танд төрсөн өдрийн мэнд хүргэе!!!
-        Сайн уу хайраа гээд энэхүү захиаг эхлүүлэхийг хэдэн мянган удаа хүссэн ч
-        надад ингэх эрх байгаа үгүйг мэдэхгүй байна...
-      </p>
+  <div class="letter">
+    <p>
+      Хорвоогийн хамгийн хөөрхөн гүнж танд төрсөн өдрийн мэнд хүргэе!!!
+      Өнөөдөр чиний хувьд хамгийн онцгой өдөр.
+    </p>
 
-      <p>
-        Өнөөдөр чиний хувьд хамгийн онцгой өдрүүдийн нэг, миний ч гэсэн.
-        Чи миний амьдралд өнгө нэмсэн, урагшлах урам зориг болсон хүн...
-      </p>
+    <p>
+      Миний амьдралд өнгө нэмсэн, урагшлах урам зориг болсон хүн чи.
+      Өдөр бүр чиний тухай бодох шалтгаан минь чи.
+    </p>
 
-      <p>
-        Чиний нүд яг л далай шиг,
-        хэрвээ би сэлэх юм бол дахин агаар амьсгалхаар гарч ирж чадахгүй байх.
-      </p>
+    <p>
+      Би чамд хайртай Намуунаа.
+      Гол нь гол нь жаргалтай байгаарай 🤍
+    </p>
 
-      <p>
-        Би чамд хайртай Намуунаа.
-        Хамгийн гол нь жаргалтай байгаарай 🤍
-      </p>
-
-      <p style="text-align:right;">
-        — Энхмэнд
-      </p>
-    </div>
-
-    <div class="music">
-      <audio controls autoplay loop>
-        <source src="Nanuhbd.mp3" type="audio/mpeg">
-        Таны браузер дуу тоглуулахыг дэмжихгүй байна.
-      </audio>
-    </div>
-
-    <div class="footer">
-      A small birthday surprise 💝
-    </div>
+    <p style="text-align:right;">— Энхмэнд</p>
   </div>
+
+  <div class="music">
+    <audio controls autoplay loop>
+      <source src="Nanuhbd.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+  heart.style.fontSize = (14 + Math.random() * 20) + "px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 8000);
+}
+
+setInterval(createHeart, 400);
+</script>
 
 </body>
 </html>
